@@ -1,4 +1,4 @@
-<template>
+d<template>
   <div class="relative" v-click-outside="closeDropdown" ref="dropdown">
     <!-- Dropdown Trigger Button -->
     <button @click="toggleDropdown" :class="buttonClass">
