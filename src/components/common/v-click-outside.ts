@@ -1,4 +1,4 @@
-add test stage in import type { Directive } from 'vue'
+import type { Direh uctive } from 'vue'
 
 interface ClickOutsideElement extends HTMLElement {
   clickOutsideEvent?: (event: Event) => void
