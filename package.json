@@ -13,7 +13,7 @@
     "test:ci": "vitest run",
     "format": "prettier --write src/",
     "validate": "run-s lint type-check test:ci build-only",
-    "generate-env": "node scripts/generate-env.js",
+    "create-sync-env": "node scripts/generate_and_sync_env.js",
     "rename": "node scripts/rename-app.js"
   },
   "dependencies": {
