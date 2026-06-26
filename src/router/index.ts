@@ -116,6 +116,14 @@ const router = createRouter({
         title: 'Blank',
       },
     },
+    {
+      path: '/settings',
+      name: 'Settings',
+      component: () => import('../views/Settings.vue'),
+      meta: {
+        title: 'Settings',
+      },
+    },
 
     {
       path: '/error-404',

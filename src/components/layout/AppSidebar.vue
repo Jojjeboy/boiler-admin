@@ -215,11 +215,13 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute } from "vue-router";
+import { useI18n } from "vue-i18n";
 
 import {
   GridIcon,
   CalenderIcon,
   UserCircleIcon,
+  SettingsIcon,
   PieChartIcon,
   ChevronDownIcon,
   HorizontalDots,
@@ -233,6 +235,7 @@ import BoxCubeIcon from "@/icons/BoxCubeIcon.vue";
 import { useSidebar } from "@/composables/useSidebar";
 
 const route = useRoute();
+const { t } = useI18n();
 
 interface SubMenuItem {
   name: string
@@ -256,83 +259,86 @@ interface MenuGroup {
 
 const { isExpanded, isMobileOpen, isHovered, openSubmenu } = useSidebar();
 
-const menuGroups: MenuGroup[] = [
+const menuGroups = computed<MenuGroup[]>(() => [
   {
-    title: "Menu",
+    title: t("sidebar.groups.menu"),
     items: [
       {
         icon: GridIcon,
-        name: "Dashboard",
-        subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+        name: t("sidebar.items.dashboard"),
+        subItems: [{ name: t("sidebar.sub_items.ecommerce"), path: "/", pro: false }],
       },
       {
         icon: CalenderIcon,
-        name: "Calendar",
+        name: t("sidebar.items.calendar"),
         path: "/calendar",
       },
       {
         icon: UserCircleIcon,
-        name: "User Profile",
+        name: t("sidebar.items.profile"),
         path: "/profile",
       },
-
       {
-        name: "Forms",
+        icon: SettingsIcon,
+        name: t("sidebar.items.settings"),
+        path: "/settings",
+      },
+      {
+        name: t("sidebar.items.forms"),
         icon: ListIcon,
         subItems: [
-          { name: "Form Elements", path: "/form-elements", pro: false },
+          { name: t("sidebar.sub_items.form_elements"), path: "/form-elements", pro: false },
         ],
       },
       {
-        name: "Tables",
+        name: t("sidebar.items.tables"),
         icon: TableIcon,
-        subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+        subItems: [{ name: t("sidebar.sub_items.basic_tables"), path: "/basic-tables", pro: false }],
       },
       {
-        name: "Pages",
+        name: t("sidebar.items.pages"),
         icon: PageIcon,
         subItems: [
-          { name: "Black Page", path: "/blank", pro: false },
-          { name: "404 Page", path: "/error-404", pro: false },
+          { name: t("sidebar.sub_items.blank_page"), path: "/blank", pro: false },
+          { name: t("sidebar.sub_items.error_404"), path: "/error-404", pro: false },
         ],
       },
     ],
   },
   {
-    title: "Others",
+    title: t("sidebar.groups.others"),
     items: [
       {
         icon: PieChartIcon,
-        name: "Charts",
+        name: t("sidebar.items.charts"),
         subItems: [
-          { name: "Line Chart", path: "/line-chart", pro: false },
-          { name: "Bar Chart", path: "/bar-chart", pro: false },
+          { name: t("sidebar.sub_items.line_chart"), path: "/line-chart", pro: false },
+          { name: t("sidebar.sub_items.bar_chart"), path: "/bar-chart", pro: false },
         ],
       },
       {
         icon: BoxCubeIcon,
-        name: "Ui Elements",
+        name: t("sidebar.items.ui_elements"),
         subItems: [
-          { name: "Alerts", path: "/alerts", pro: false },
-          { name: "Avatars", path: "/avatars", pro: false },
-          { name: "Badge", path: "/badge", pro: false },
-          { name: "Buttons", path: "/buttons", pro: false },
-          { name: "Images", path: "/images", pro: false },
-          { name: "Videos", path: "/videos", pro: false },
+          { name: t("sidebar.sub_items.alerts"), path: "/alerts", pro: false },
+          { name: t("sidebar.sub_items.avatars"), path: "/avatars", pro: false },
+          { name: t("sidebar.sub_items.badge"), path: "/badge", pro: false },
+          { name: t("sidebar.sub_items.buttons"), path: "/buttons", pro: false },
+          { name: t("sidebar.sub_items.images"), path: "/images", pro: false },
+          { name: t("sidebar.sub_items.videos"), path: "/videos", pro: false },
         ],
       },
       {
         icon: PlugInIcon,
-        name: "Authentication",
+        name: t("sidebar.items.authentication"),
         subItems: [
-          { name: "Signin", path: "/signin", pro: false },
-          { name: "Signup", path: "/signup", pro: false },
+          { name: t("sidebar.sub_items.signin"), path: "/signin", pro: false },
+          { name: t("sidebar.sub_items.signup"), path: "/signup", pro: false },
         ],
       },
-      // ... Add other menu items here
     ],
   },
-];
+]);
 
 const isActive = (path: string) => route.path === path;
 
@@ -342,7 +348,7 @@ const toggleSubmenu = (groupIndex: number, itemIndex: number) => {
 };
 
 const isAnySubmenuRouteActive = computed(() => {
-  return menuGroups.some((group) =>
+  return menuGroups.value.some((group) =>
     group.items.some(
       (item) =>
         item.subItems && item.subItems.some((subItem) => isActive(subItem.path))
@@ -355,7 +361,7 @@ const isSubmenuOpen = (groupIndex: number, itemIndex: number) => {
   return (
     openSubmenu.value === key ||
     (isAnySubmenuRouteActive.value &&
-      menuGroups[groupIndex].items[itemIndex].subItems?.some((subItem) =>
+      menuGroups.value[groupIndex].items[itemIndex].subItems?.some((subItem) =>
         isActive(subItem.path)
       ))
   );

@@ -1,0 +1,62 @@
+{
+  "common": {
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "auth": {
+    "signin": "Sign In",
+    "signin_subtitle": "Enter your email and password to sign in!",
+    "signin_google": "Sign in with Google",
+    "signin_error": "Failed to sign in with Google. Please try again."
+  },
+  "brand": {
+    "name": "Boiler-Admin",
+    "description": "Free and Open-Source Tailwind CSS Admin Dashboard Template"
+  },
+  "user": {
+    "fallback_name": "User",
+    "sign_out": "Sign out",
+    "edit_profile": "Edit profile",
+    "account_settings": "Account settings",
+    "support": "Support"
+  },
+  "sidebar": {
+    "groups": {
+      "menu": "Menu",
+      "others": "Others"
+    },
+    "items": {
+      "dashboard": "Dashboard",
+      "calendar": "Calendar",
+      "profile": "User Profile",
+      "settings": "Settings",
+      "forms": "Forms",
+      "tables": "Tables",
+      "pages": "Pages",
+      "charts": "Charts",
+      "ui_elements": "Ui Elements",
+      "authentication": "Authentication"
+    },
+    "sub_items": {
+      "ecommerce": "Ecommerce",
+      "form_elements": "Form Elements",
+      "basic_tables": "Basic Tables",
+      "blank_page": "Black Page",
+      "error_404": "404 Page",
+      "line_chart": "Line Chart",
+      "bar_chart": "Bar Chart",
+      "alerts": "Alerts",
+      "avatars": "Avatars",
+      "badge": "Badge",
+      "buttons": "Buttons",
+      "images": "Images",
+      "videos": "Videos",
+      "signin": "Signin",
+      "signup": "Signup"
+    }
+  }
+}

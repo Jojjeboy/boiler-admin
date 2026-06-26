@@ -1,0 +1,62 @@
+{
+  "common": {
+    "settings": "Inställningar",
+    "language": "Språk",
+    "theme": "Tema",
+    "light": "Ljus",
+    "dark": "Mörk",
+    "system": "System"
+  },
+  "auth": {
+    "signin": "Logga in",
+    "signin_subtitle": "Ange din e-post och ditt lösenord för att logga in!",
+    "signin_google": "Logga in med Google",
+    "signin_error": "Kunde inte logga in med Google. Försök igen."
+  },
+  "brand": {
+    "name": "Boiler-Admin",
+    "description": "Gratis och öppen källkod Tailwind CSS Admin Dashboard-mall"
+  },
+  "user": {
+    "fallback_name": "Användare",
+    "sign_out": "Logga ut",
+    "edit_profile": "Redigera profil",
+    "account_settings": "Kontoinställningar",
+    "support": "Support"
+  },
+  "sidebar": {
+    "groups": {
+      "menu": "Meny",
+      "others": "Övrigt"
+    },
+    "items": {
+      "dashboard": "Instrumentpanel",
+      "calendar": "Kalender",
+      "profile": "Användarprofil",
+      "settings": "Inställningar",
+      "forms": "Formulär",
+      "tables": "Tabeller",
+      "pages": "Sidor",
+      "charts": "Diagram",
+      "ui_elements": "UI-element",
+      "authentication": "Autentisering"
+    },
+    "sub_items": {
+      "ecommerce": "E-handel",
+      "form_elements": "Formulärelement",
+      "basic_tables": "Grundläggande tabeller",
+      "blank_page": "Blank sida",
+      "error_404": "404-sida",
+      "line_chart": "Linjediagram",
+      "bar_chart": "Stapeldiagram",
+      "alerts": "Varningar",
+      "avatars": "Avatarer",
+      "badge": "Märken",
+      "buttons": "Knappar",
+      "images": "Bilder",
+      "videos": "Videor",
+      "signin": "Logga in",
+      "signup": "Registrera dig"
+    }
+  }
+}
