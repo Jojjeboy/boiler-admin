@@ -134,14 +134,6 @@ const router = createRouter({
         title: 'Signin',
       },
     },
-    {
-      path: '/signup',
-      name: 'Signup',
-      component: () => import('../views/Auth/Signup.vue'),
-      meta: {
-        title: 'Signup',
-      },
-    },
   ],
 })
 
@@ -150,7 +142,7 @@ export default router
 router.beforeEach(async (to, from, next) => {
   document.title = `Vue.js ${to.meta.title} | TailAdmin - Vue.js Tailwind CSS Dashboard Template`
 
-  const publicPages = ['/signin', '/signup']
+  const publicPages = ['/signin']
   const authRequired = !publicPages.includes(to.path)
 
   // We wrap the auth check in a promise to ensure Firebase has initialized
