@@ -33,7 +33,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/',
+  base: '/boiler-admin/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
