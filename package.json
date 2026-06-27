@@ -1,5 +1,5 @@
 {
-  "name": "workoutcount",
+  "name": "workout-count",
   "version": "2.3.0",
   "private": true,
   "type": "module",

@@ -243,7 +243,7 @@ const menuGroups = computed<MenuGroup[]>(() => [
     items: [
     {
         icon: GridIcon,
-        name: t("sidebar.items.landing"),
+        name: t("sidebar.items.start"),
         path:  "/",
       },
       {

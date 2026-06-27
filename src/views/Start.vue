@@ -7,7 +7,7 @@
         <h3
           class="mb-4 font-semibold text-gray-800 text-theme-xl dark:text-white/90 sm:text-2xl"
         >
-          Landing Page
+          Start
         </h3>
 
         <p class="text-sm text-gray-500 dark:text-gray-400 sm:text-base">

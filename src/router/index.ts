@@ -10,10 +10,10 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'Landing',
-      component: () => import('../views/Landing.vue'),
+      name: 'Start',
+      component: () => import('../views/Start.vue'),
       meta: {
-        title: 'Landing Page',
+        title: 'Start',
       },
     },
     {
@@ -156,7 +156,7 @@ const router = createRouter({
 export default router
 
 router.beforeEach(async (to, from, next) => {
-  document.title = `Vue.js ${to.meta.title} | Boiler Admin - Vue.js Tailwind CSS Dashboard Template`
+  document.title = `${to.meta.title} | Boiler Admin`
 
   const publicPages = ['/signin']
   const authRequired = !publicPages.includes(to.path)

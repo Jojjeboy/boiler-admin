@@ -14,18 +14,18 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['logo.png', 'apple-touch-icon.png', 'masked-icon.svg'],
         manifest: {
-        name: 'Boiler Admin',
-        short_name: 'Boiler Admin',
-        description: 'Boiler Admin Admin Dashboard',
-        theme_color: '#0a0a0f',
+        name: 'workoutcount',
+        short_name: 'workoutcount',
+        description: 'workoutcount Admin Dashboard',
+        theme_color: '#0f1929',
         icons: [
           {
-            src: 'img/icons/pwa-192x192.png',
+            src: 'images/logo/wave-logo_black.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: 'img/icons/pwa-512x512.png',
+            src: 'images/logo/wave-logo_black.png',
             sizes: '512x512',
             type: 'image/png',
           },
