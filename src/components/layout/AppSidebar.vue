@@ -15,23 +15,25 @@
     @mouseleave="isHovered = false"
   >
     <div
-      :class="[
-        'py-8 flex',
-        !isExpanded && !isHovered ? 'lg:justify-center' : 'justify-start',
-      ]"
+      class="py-8 flex justify-start"
     >
-      <router-link to="/">
+      <router-link to="/" class="flex items-center gap-2">
+
+        <img
+          src="/images/logo/wave-logo_light.png"
+          alt="Logo"
+          class="dark:hidden w-8 h-8 object-contain"
+        />
+        <img
+          src="/images/logo/wave-logo_black.png"
+          alt="Logo"
+          class="hidden dark:block w-8 h-8 object-contain"
+        />
         <span
           v-if="isExpanded || isHovered || isMobileOpen"
-          class="text-xl font-bold text-gray-800 dark:text-white"
+          class="text-xl pl-2 font-bold text-gray-800 dark:text-white"
         >
           {{ t('brand.name') }}
-        </span>
-        <span
-          v-else
-          class="text-xl font-bold text-gray-800 dark:text-white"
-        >
-          W
         </span>
       </router-link>
     </div>
